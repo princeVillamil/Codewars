@@ -18,5 +18,14 @@ function isIsogram(str){
     }
     return true
 }
-  
+
+// reapeat
+function isIsogram(str){
+  //...
+  let passed = []
+  str.toLowerCase().split('').forEach((x,i,arr)=>{
+    passed.includes(x) ? x : passed.push(x)
+  })
+  return passed.length == str.length
+}
   
