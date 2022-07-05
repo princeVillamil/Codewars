@@ -11,3 +11,9 @@ function solution(str, ending){
     // TODO: complete
     return str.endsWith(ending)
 }
+
+//repeat 
+function solution(str, ending){
+    // TODO: complete
+    return str.split('').reverse().slice(0,ending.length).reverse().join('').includes(ending)
+  }
