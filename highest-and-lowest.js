@@ -11,3 +11,12 @@ function highAndLow(numbers){
     numbers = numbers.split(' ');
     return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
 }
+
+// Reapet
+function highAndLow(numbers){
+    // ...
+    let arr = numbers.split(' ').map(x=>{
+      return x = parseInt(x)
+    })
+    return `${Math.max(...arr)} ${Math.min(...arr)}`
+  }
