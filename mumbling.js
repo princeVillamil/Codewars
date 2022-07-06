@@ -13,3 +13,10 @@ function accum(s) {
 	// your code
   return s.split('').map((c,i) => c.toUpperCase() + c.toLowerCase().repeat(i)).join('-')
 }
+
+// Repeat
+function accum(s) {
+	// your code
+//   return s.split('').map((x, i) => (x.toUpperCase()+x.toLowerCase().repeat(i))).join('-')
+  return s.split('').map((x,i)=>(x.toUpperCase()+x.toLowerCase().repeat(i))).join('-')
+}
