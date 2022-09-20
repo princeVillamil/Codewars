@@ -17,3 +17,4 @@ function checkExam(array1, array2) {
      let result = array2.reduce((acc, current, i) => current.length ? (current == array1[i] ? acc+4 : acc-1) : acc, 0);
      return result < 0 ? 0 : result;
 }
+
