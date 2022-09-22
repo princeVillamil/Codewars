@@ -14,4 +14,5 @@ first(arr, 0) //=> [];
 function first(arr, n) {
   // return arr;
   return arr.slice(0, n)
+  //FIxed
 }
