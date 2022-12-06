@@ -2308,3 +2308,46 @@ function test(){
 }
 
 test()
+
+/*
+Your puzzle answer was 66306.
+
+The first half of this puzzle is complete! It provides one gold star: *
+--- Part Two ---
+
+By the time you calculate the answer to the Elves' question, they've already realized that the Elf carrying the most Calories of food might eventually run out of snacks.
+
+To avoid this unacceptable situation, the Elves would instead like to know the total Calories carried by the top three Elves carrying the most Calories. That way, even if one of those Elves runs out of snacks, they still have two backups.
+
+In the example above, the top three Elves are the fourth Elf (with 24000 Calories), then the third Elf (with 11000 Calories), then the fifth Elf (with 10000 Calories). The sum of the Calories carried by these three elves is 45000.
+
+Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in total?
+
+Answer:
+
+Although it hasn't changed, you can still get your puzzle input.
+
+You can also [Shareon Twitter Mastodon] this puzzle.
+
+195292 <=========================Answer
+*/
+function test(){
+  let arrOfMax=[]
+  let mainText = document.body.innerText.replaceAll("\n", ' ').replaceAll('  ', '-')
+  let newArr = mainText.split('-').map( (x,i, arr)=>{
+    let newX = x.split(' ').reduce((acc,curr)=>+acc + +curr)
+//     if(i==241) console.log(x, '____', newX,'____', arr[241])
+    return parseInt(newX)
+  })
+  for(let i=1;i<=3;i++){
+  	let currentMax = Math.max(...newArr)
+//     console.log(currentMax)
+    arrOfMax.push(currentMax)
+    newArr[newArr.indexOf(currentMax)] = 0
+  }
+  console.log(arrOfMax.reduce((acc,curr)=>acc+curr))
+//   console.log(newArr.indexOf(currentMax))
+  
+	
+}
+test()
