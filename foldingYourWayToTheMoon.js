@@ -23,6 +23,17 @@ function foldTo(distance) {
   }
   return folds;
 }
+function foldTo(distance) {
+  console.log(distance)
+  let counter = 0;
+  let paper = 0.0001;
+  if(distance<=0) return null
+  while(distance > paper){
+    paper*=2
+    counter++
+  }
+  return counter
+}
 const assert = require("chai").assert;
 
 describe('foldTo', function() {
